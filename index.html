@@ -359,22 +359,24 @@
 
     .section-header {
       display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 10px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid rgba(30, 64, 175, 0.4);
-      padding-bottom: 6px;
+  flex-direction: column;          /* Title ကို အပေါ်ကြားအောက်စီ */
+  align-items: center;             /* အလယ်တည့်တည့် */
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(30, 64, 175, 0.4);
+  padding-bottom: 8px;
+  text-align: center;              /* စာလုံးတွေကိုလည်း အလယ်တည့် */
     }
 
     .section-title {
-      font-size: 0.92rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #9ca3af;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      font-size: 1.1rem;               /* ကြီးကြီးထင်းထင်း */
+  text-transform: uppercase;
+  letter-spacing: 0.18em;          /* လေးလေးနက်နက် spacing */
+  color: #e5e7eb;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
     }
 
     .section-title span.dot {
@@ -386,8 +388,7 @@
     }
 
     .section-sub {
-      font-size: 0.78rem;
-      color: var(--text-sub);
+        display: none;
     }
 
     /* SOCIAL LIST */
