@@ -144,22 +144,12 @@
     }
 
     /* PROFILE / HERO */
-    @keyframes spinGradient {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes floatUpDown {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-4px); }
-    }
-
     .hero {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 14px;
-      margin-bottom: 20px;
+      margin-bottom: 0;
       text-align: center;
     }
 
@@ -175,40 +165,39 @@
       position: relative;
       width: 110px;
       height: 110px;
-      /* animation: floatUpDown 7s ease-in-out infinite; */
     }
 
     .avatar-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  padding: 3px;
-  background: radial-gradient(circle at top, #22c55e, #16a34a);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow:
-    0 0 0 2px rgba(15, 23, 42, 1),
-    0 0 30px rgba(34, 197, 94, 0.65);
-}
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      padding: 3px;
+      background: radial-gradient(circle at top, #22c55e, #16a34a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow:
+        0 0 0 2px rgba(15, 23, 42, 1),
+        0 0 30px rgba(34, 197, 94, 0.65);
+    }
 
     .avatar-inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle at top, #020617, #020617);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle at top, #020617, #020617);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     .avatar-inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     .hero-title {
       font-size: 1.6rem;
@@ -352,31 +341,81 @@
       }
     }
 
+    /* TELEGRAM CONTACT (PROFILE အောက်မှာ Center + Effect) */
+.hero-contact {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-telegram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: radial-gradient(circle at top, rgba(37, 99, 235, 0.26), rgba(15, 23, 42, 0.95));
+  border: 1px solid rgba(59, 130, 246, 0.8);
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.9),
+    0 14px 30px rgba(37, 99, 235, 0.55);
+  backdrop-filter: blur(16px);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease,
+              background 0.18s ease, opacity 0.18s ease;
+}
+
+.contact-telegram:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: #60a5fa;
+  box-shadow:
+    0 0 0 1px rgba(37, 99, 235, 0.9),
+    0 18px 40px rgba(37, 99, 235, 0.75);
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.38), rgba(15, 23, 42, 0.98));
+}
+
+.contact-telegram i {
+  font-size: 1.35rem;
+  color: #60a5fa;
+}
+
+.contact-telegram span {
+  font-size: 0.86rem;
+  color: #e5e7eb;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+
     /* SECTIONS */
     .section {
-      margin-top: 18px;
+      margin-top: 0;
     }
 
     .section-header {
       display: flex;
-  flex-direction: column;          /* Title ကို အပေါ်ကြားအောက်စီ */
-  align-items: center;             /* အလယ်တည့်တည့် */
-  justify-content: center;
-  gap: 4px;
-  margin-bottom: 16px;
-  border-bottom: 1px solid rgba(30, 64, 175, 0.4);
-  padding-bottom: 8px;
-  text-align: center;              /* စာလုံးတွေကိုလည်း အလယ်တည့် */
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(30, 64, 175, 0.4);
+      padding-bottom: 8px;
+      text-align: center;
     }
 
     .section-title {
-      font-size: 1.1rem;               /* ကြီးကြီးထင်းထင်း */
-  text-transform: uppercase;
-  letter-spacing: 0.18em;          /* လေးလေးနက်နက် spacing */
-  color: #e5e7eb;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .section-title span.dot {
@@ -388,7 +427,7 @@
     }
 
     .section-sub {
-        display: none;
+      display: none;
     }
 
     /* SOCIAL LIST */
@@ -464,12 +503,12 @@
 
     .item-sub {
       font-size: 0.8rem;
-  color: var(--text-sub);
-  white-space: normal;      /* ဖုန်းမှာ စာကြောင်းကျ သွားအောင် */
-  overflow: visible;        /* အပြည့်ပုံမှန်ပြ */
-  text-overflow: unset;     /* “…” တော့ မလိုတော့ */
-  line-height: 1.4;         /* မြန်မာစာ ကြည့်လို့ လွယ်အောင် */
-  word-break: break-word;   /* စာလုံးရှည်ရင် မျက်နှာပြင်ထဲနဲ့ပဲ ခွာပစ် */
+      color: var(--text-sub);
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
+      line-height: 1.4;
+      word-break: break-word;
     }
 
     .item-action {
@@ -495,7 +534,7 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
-      align-items: stretch;   /* make row items same height */
+      align-items: stretch;
     }
 
     @media (max-width: 870px) {
@@ -517,7 +556,7 @@
                   #020617;
       padding: 10px 11px;
       display: flex;
-      flex-direction: column;  /* important for pushing buttons to bottom */
+      flex-direction: column;
       gap: 7px;
       transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
     }
@@ -586,7 +625,7 @@
       gap: 8px;
       flex-wrap: nowrap;
       align-items: center;
-      margin-top: auto;   /* push buttons to bottom of card */
+      margin-top: auto;
     }
 
     .app-actions .btn-play,
@@ -623,6 +662,45 @@
       transform: translateY(-1px) scale(1.01);
     }
 
+    /* PANEL GROUPS (BACKGROUND BOXES) */
+    .panel {
+      border-radius: 28px;
+      padding: 18px 18px 20px;
+      margin-bottom: 22px;
+      background: rgba(2, 6, 23, 0.60);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-panel {
+      background: linear-gradient(
+        135deg,
+        rgba(16, 185, 129, 0.15),
+        rgba(2, 6, 23, 0.65)
+      );
+    }
+
+    .social-panel {
+      background: linear-gradient(
+        135deg,
+        rgba(59, 130, 246, 0.18),
+        rgba(2, 6, 23, 0.60)
+      );
+    }
+
+    .apps-panel {
+      background: linear-gradient(
+        135deg,
+        rgba(34, 197, 94, 0.16),
+        rgba(2, 6, 23, 0.60)
+      );
+    }
+
+    .panel .section {
+      margin-top: 0;
+    }
+
     /* FOOTER */
     footer {
       margin-top: 10px;
@@ -640,293 +718,300 @@
 <body>
   <main class="page">
     <div class="shell">
-      <!-- PROFILE / HERO -->
-      <section class="hero">
-        <div class="hero-main">
-          <div class="avatar-frame">
-            <div class="avatar-ring">
-              <div class="avatar-inner">
-                
-                <!-- <img src="assets/profile.jpg" alt="Ye Linn Aung" /> -->
-                <!-- <span>YL</span> -->
-                 <img src="logo.png" alt="Ye Linn Aung" />
+
+      <!-- PROFILE PANEL -->
+      <div class="panel hero-panel">
+        <section class="hero">
+          <div class="hero-main">
+            <div class="avatar-frame">
+              <div class="avatar-ring">
+                <div class="avatar-inner">
+                  <img src="logo.png" alt="Ye Linn Aung" />
+                </div>
               </div>
             </div>
+            <div>
+              <h1 class="hero-title">Ye Linn Aung</h1>
+              <div class="hero-role">Ye Linn Aung Vlog Official Website</div>
+              <p class="hero-sub">
+                Ye Linn Aung Vlog ရဲ့
+                <span>Facebook Page</span>,
+                <span>YouTube Channel</span>,
+                <span>TikTok Channel</span>,
+                <span>ကိုယ်ပိုင် Appများ</span>
+                အားလုံးကို တစ်နေရာတည်းမှာ စုစည်းဖော်ပြပေးထားခြင်းဖြစ်ပါသည်။
+              </p>
+            </div>
+
+            <div class="hero-tags">
+              <span class="tag-pill highlight">
+                <i class="fa fa-code"></i>
+                App Developer
+              </span>
+              <span class="tag-pill highlight">
+                <i class="fa fa-address-book"></i>
+                Content Creator
+              </span>
+
+            </div>
+
+            <div class="hero-contact">
+  <a
+    href="https://t.me/ylatvapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="contact-telegram"
+  >
+    <i class="fa-brands fa-telegram"></i>
+    <span>အလုပ်ကိစ္စများအတွက် Telegram မှ ဆက်သွယ်နိုင်ပါတယ်</span>
+  </a>
+</div>
+
+
+
           </div>
-          <div>
-            <h1 class="hero-title">Ye Linn Aung</h1>
-            <div class="hero-role">Ye Linn Aung Vlog Official Website </div>
-            <p class="hero-sub">
-              Ye Linn Aung Vlog ရဲ့ 
-              <span>Facebook Page</span>,
-              <span>YouTube Channel</span>,
-              <span>TikTok Channel</span>,
-              <span>ကိုယ်ပိုင် Appများ</span>
-              အားလုံးကို တစ်နေရာတည်းမှာ စုစည်းဖော်ပြပေးထားခြင်းဖြစ်ပါသည်။
-              <!-- <strong>yelinnaung.com</strong>. -->
-            </p>
+        </section>
+      </div>
+
+      <!-- SOCIAL PANEL -->
+      <div class="panel social-panel">
+        <section class="section" id="social">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="dot"></span>
+              Social Channels
+            </h2>
+            <p class="section-sub">Facebook · YouTube · TikTok — Official only</p>
           </div>
 
-          <div class="hero-tags">
+          <div class="list">
+            <!-- Facebook Page 1 -->
+            <article class="item">
+              <div class="item-main">
+                <div class="icon-circle icon-fb">
+                  <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                </div>
+                <div class="item-text">
+                  <div class="item-title">Ye Linn Aung Vlog</div>
+                  <div class="item-sub">
+                    ဖုန်းဆော့ဝဲလ်အကြောင်းအရာများကိုနေ့စဉ်မျှဝေပေးနေသော Channel
+                  </div>
+                </div>
+              </div>
+              <div class="item-action">
+                <a
+                  href="https://facebook.com/yelinnaungchannel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-ghost btn-small"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  Open
+                </a>
+              </div>
+            </article>
 
-            <span class="tag-pill highlight">
-              <i class="fa fa-code"></i>
-              App Developer
-            </span>
-            <span class="tag-pill highlight">
-              <i class="fa fa-address-book"></i>
-              Content Creator
-            </span>
+            <!-- Facebook Page 2 -->
+            <article class="item">
+              <div class="item-main">
+                <div class="icon-circle icon-fb">
+                  <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                </div>
+                <div class="item-text">
+                  <div class="item-title">Ye Linn Aung Channel</div>
+                  <div class="item-sub">
+                    ဖုန်းဆော့ဝဲလ်အကြောင်းအရာများကိုနေ့စဉ်မျှဝေပေးနေသော Channel 2
+                  </div>
+                </div>
+              </div>
+              <div class="item-action">
+                <a
+                  href="https://facebook.com/yelinnaungvlog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-ghost btn-small"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  Open
+                </a>
+              </div>
+            </article>
 
-            <!-- <span class="tag-pill">
-              <i class="fa-solid fa-location-dot"></i>
-              Myanmar · Digital Creator
-            </span> -->
+            <!-- YouTube -->
+            <article class="item">
+              <div class="item-main">
+                <div class="icon-circle icon-yt">
+                  <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                </div>
+                <div class="item-text">
+                  <div class="item-title">Ye Linn Aung Vlog</div>
+                  <div class="item-sub">
+                    ဖုန်းဆော့ဝဲလ်အကြောင်းအရာများကိုနေ့စဉ်မျှဝေပေးနေသော Youtube Channel
+                  </div>
+                </div>
+              </div>
+              <div class="item-action">
+                <a
+                  href="https://youtube.com/@yelinnaungvlog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-ghost btn-small"
+                >
+                  <i class="fa-solid fa-play"></i>
+                  Watch
+                </a>
+              </div>
+            </article>
 
+            <!-- TikTok -->
+            <article class="item">
+              <div class="item-main">
+                <div class="icon-circle icon-tt">
+                  <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                </div>
+                <div class="item-text">
+                  <div class="item-title">TikTok · @yelinnaungchannel</div>
+                  <div class="item-sub">Official Tiktok Channel</div>
+                </div>
+              </div>
+              <div class="item-action">
+                <a
+                  href="https://www.tiktok.com/@yelinnaungchannel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-ghost btn-small"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  Open
+                </a>
+              </div>
+            </article>
           </div>
+        </section>
+      </div>
 
-          <!-- <div class="hero-buttons">
-            <a href="#social" class="btn btn-ghost">
-              <i class="fa-solid fa-users"></i>
-              Social Links
-            </a>
-            <a href="#apps" class="btn btn-primary">
-              <i class="fa-solid fa-mobile-screen-button"></i>
+      <!-- APPS PANEL -->
+      <div class="panel apps-panel">
+        <section class="section" id="apps">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="dot"></span>
               My Apps
-            </a>
-          </div> -->
-        </div>
-      </section>
+            </h2>
+            <p class="section-sub">Each app with Play Store + Direct Download links</p>
+          </div>
 
-      <!-- SOCIAL SECTION -->
-      <section class="section" id="social">
-        <div class="section-header">
-          <h2 class="section-title">
-            <span class="dot"></span>
-            Social Channels
-          </h2>
-          <p class="section-sub">Facebook · YouTube · TikTok — Official only</p>
-        </div>
+          <div class="apps-grid">
+            <!-- APP 1: YLA Game Shop -->
+            <article class="app-card">
+              <div class="app-top">
+                <div class="app-icon">
+                  <img src="ylagameshop.png" alt="YLA Game Shop" />
+                </div>
+                <div class="app-header">
+                  <div class="app-name">YLA Game Shop</div>
+                  <div class="app-tag">Android &amp; Website</div>
+                </div>
+              </div>
+              <p class="app-desc">
+                Mobile Legends Diamondများ၊ PUBG UCများ နှင့် အခြား Gameပေါင်းများစွာရဲ့ Coinsများကို စျေးနှုန်းချိုသာစွာဖြင့် ဆောင့်စရာမလိုပဲ ဝယ်ယူနိုင်သောဆော့ဝဲလ်
+              </p>
+              <div class="app-actions">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-play btn-small"
+                >
+                  <i class="fa-brands fa-google-play"></i>
+                  Play Store
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-direct btn-small"
+                >
+                  <i class="fa-brands fa-android"></i>
+                  Direct Download
+                </a>
+              </div>
+            </article>
 
-        <div class="list">
-          <!-- Facebook Page 1 -->
-          <article class="item">
-            <div class="item-main">
-              <div class="icon-circle icon-fb">
-                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            <!-- APP 2: YLA TV -->
+            <article class="app-card">
+              <div class="app-top">
+                <div class="app-icon">
+                  <img src="ylatv.png" alt="YLA TV" />
+                </div>
+                <div class="app-header">
+                  <div class="app-name">YLA TV</div>
+                  <div class="app-tag">Android</div>
+                </div>
               </div>
-              <div class="item-text">
-                <div class="item-title"> Ye Linn Aung Vlog </div>
-                <div class="item-sub">ဖုန်းဆော့ဝဲလ်အကြောင်းအရာများကိုနေ့စဉ်မျှဝေပေးနေသော Channel</div>
+              <p class="app-desc">
+                ဘောလုံးပွဲများ၊ ဟိုက်လိုက်များ၊ မြန်မာစာတန်းထိုးဇာတ်ကားများကို အခမဲ့ ကြည့်ရှုနိုင်သောဆော့ဝဲလ်
+              </p>
+              <div class="app-actions">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-play btn-small"
+                >
+                  <i class="fa-brands fa-google-play"></i>
+                  Play Store
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-direct btn-small"
+                >
+                  <i class="fa-brands fa-android"></i>
+                  Direct Download
+                </a>
               </div>
-            </div>
-            <div class="item-action">
-              <a
-                href="https://facebook.com/yelinnaungchannel"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-ghost btn-small"
-              >
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                Open
-              </a>
-            </div>
-          </article>
+            </article>
 
-          <!-- Facebook Page 2 -->
-          <article class="item">
-            <div class="item-main">
-              <div class="icon-circle icon-fb">
-                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            <!-- APP 3: Dhamma Book -->
+            <article class="app-card">
+              <div class="app-top">
+                <div class="app-icon">
+                  <img src="dhammabook.png" alt="Dhamma Book" />
+                </div>
+                <div class="app-header">
+                  <div class="app-name">Dhamma Book</div>
+                  <div class="app-tag">Android</div>
+                </div>
               </div>
-              <div class="item-text">
-                <div class="item-title"> Ye Linn Aung Channel </div>
-                <div class="item-sub">ဖုန်းဆော့ဝဲလ်အကြောင်းအရာများကိုနေ့စဉ်မျှဝေပေးနေသော Channel 2</div>
+              <p class="app-desc">
+                ဗုဒ္ဓတရားဓမတော်များ၊ ဘုရားစာများ အားလုံးကို အလွယ်တကူ ဖတ်ရှု၊ နာယူနိုင်သော ဆော့ဝဲလ်
+              </p>
+              <div class="app-actions">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-play btn-small"
+                >
+                  <i class="fa-brands fa-google-play"></i>
+                  Play Store
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-direct btn-small"
+                >
+                  <i class="fa-brands fa-android"></i>
+                  Direct Download
+                </a>
               </div>
-            </div>
-            <div class="item-action">
-              <a
-                href="https://facebook.com/yelinnaungvlog"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-ghost btn-small"
-              >
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                Open
-              </a>
-            </div>
-          </article>
-
-          <!-- YouTube -->
-          <article class="item">
-            <div class="item-main">
-              <div class="icon-circle icon-yt">
-                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-              </div>
-              <div class="item-text">
-                <div class="item-title"> Ye Linn Aung Vlog </div>
-                <div class="item-sub">ဖုန်းဆော့ဝဲလ်အကြောင်းအရာများကိုနေ့စဉ်မျှဝေပေးနေသော Youtube Channel</div>
-              </div>
-            </div>
-            <div class="item-action">
-              <a
-                href="https://youtube.com/@yelinnaungvlog"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-ghost btn-small"
-              >
-                <i class="fa-solid fa-play"></i>
-                Watch
-              </a>
-            </div>
-          </article>
-
-          <!-- TikTok -->
-          <article class="item">
-            <div class="item-main">
-              <div class="icon-circle icon-tt">
-                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
-              </div>
-              <div class="item-text">
-                <div class="item-title">TikTok · @yelinnaungchannel</div>
-                <div class="item-sub">Official Tiktok Channel</div>
-              </div>
-            </div>
-            <div class="item-action">
-              <a
-                href="https://www.tiktok.com/@yelinnaungchannel"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-ghost btn-small"
-              >
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                Open
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- APPS SECTION -->
-      <section class="section" id="apps">
-        <div class="section-header">
-          <h2 class="section-title">
-            <span class="dot"></span>
-            My Apps
-          </h2>
-          <p class="section-sub">Each app with Play Store + Direct Download links</p>
-        </div>
-
-        <div class="apps-grid">
-          <!-- APP 1: Lucky 2D 3D -->
-          <article class="app-card">
-            <div class="app-top">
-              <div class="app-icon">
-                <img src="ylagameshop.png" alt="YLA Game Shop" />
-              </div>
-              <div class="app-header">
-                <div class="app-name"> YLA Game Shop </div>
-                <div class="app-tag">Android & Website</div>
-              </div>
-            </div>
-            <p class="app-desc">
-              Mobile Legends Diamondများ၊ PUBG UCများ နှင့် အခြား Gameပေါင်းများစွာရဲ့ Coinsများကို စျေးနှုန်းချိုသာစွာဖြင့် ဆောင့်စရာမလိုပဲ ဝယ်ယူနိုင်သောဆော့ဝဲလ်
-            </p>
-            <div class="app-actions">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-play btn-small"
-              >
-                <i class="fa-brands fa-google-play"></i>
-                Play Store
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-direct btn-small"
-              >
-                <i class="fa-brands fa-android"></i>
-                Direct Download
-              </a>
-            </div>
-          </article>
-
-          <!-- APP 2: Dhamma Book -->
-          <article class="app-card">
-            <div class="app-top">
-              <div class="app-icon">
-                <img src="ylatv.png" alt="YLA TV" />
-              </div>
-              <div class="app-header">
-                <div class="app-name">YLA TV</div>
-                <div class="app-tag">ANDROID</div>
-              </div>
-            </div>
-            <p class="app-desc">
-              ဘောလုံးပွဲများ၊ ဟိုက်လိုက်များ၊ မြန်မာစာတန်းထိုးဇာတ်ကားများကို အခမဲ့ ကြည့်ရှုနိုင်သောဆော့ဝဲလ်
-            </p>
-            <div class="app-actions">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-play btn-small"
-              >
-                <i class="fa-brands fa-google-play"></i>
-                Play Store
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-direct btn-small"
-              >
-                <i class="fa-brands fa-android"></i>
-                Direct Download
-              </a>
-            </div>
-          </article>
-
-          <!-- APP 3: YLA Game Shop -->
-          <article class="app-card">
-            <div class="app-top">
-              <div class="app-icon">
-                <img src="dhammabook.png" alt="Dhamma Book" />
-              </div>
-              <div class="app-header">
-                <div class="app-name">Dhamma Book</div>
-                <div class="app-tag">ANDROID</div>
-              </div>
-            </div>
-            <p class="app-desc">
-              ဗုဒ္ဓတရားဓမတော်များ၊ ဘုရားစာများ အားလုံးကို အလွယ်တကူ ဖတ်ရှု၊ နာယူနိုင်သော ဆော့ဝဲလ်
-            </p>
-            <div class="app-actions">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-play btn-small"
-              >
-                <i class="fa-brands fa-google-play"></i>
-                Play Store
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-direct btn-small"
-              >
-                <i class="fa-brands fa-android"></i>
-                Direct Download
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
+            </article>
+          </div>
+        </section>
+      </div>
 
       <footer>
         © <span id="year"></span> · <span class="name">Ye Linn Aung</span> · yelinnaung.com
