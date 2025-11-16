@@ -348,6 +348,42 @@
     }
 
     /* TELEGRAM CONTACT (PROFILE အောက်မှာ Center + Effect) */
+
+    .hero-telegram {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-telegram a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #1e3a8a, #1e40af);
+  color: #e0e7ff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(30, 64, 175, 0.45);
+  border: 1px solid rgba(59, 130, 246, 0.55);
+}
+
+.hero-telegram a i {
+  font-size: 1rem;
+  color: #60a5fa;
+}
+
+.hero-telegram a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(30, 58, 138, 0.6);
+}
+
+
+
 .hero-contact {
     width: 100%;
   margin-top: 12px;
@@ -400,7 +436,7 @@
 
     /* SECTIONS */
     .section {
-      margin-top: 0;
+      margin-top: 24px;
     }
 
     .section-header {
@@ -682,6 +718,7 @@
 
     .hero-panel {
         overflow: hidden;
+        margin-bottom: 40px;
       background: linear-gradient(
         135deg,
         rgba(16, 185, 129, 0.15),
@@ -706,7 +743,7 @@
     }
 
     .panel .section {
-      margin-top: 0;
+      margin-top: 0px;
     }
 
     /* FOOTER */
@@ -761,19 +798,18 @@
                 Content Creator
               </span>
 
-            </div>
+            <!-- </div> -->
 
-            <div class="hero-contact">
-  <a
-    href="https://t.me/ylatvapp"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="contact-telegram"
-  >
-    <i class="fa-brands fa-telegram"></i>
-    <span>အလုပ်ကိစ္စများအတွက် Telegram မှ ဆက်သွယ်နိုင်ပါတယ်</span>
-  </a>
+            </div> <!-- END .hero-main -->
+
+<!-- TELEGRAM CONTACT INSIDE HERO PANEL -->
+<div class="hero-telegram">
+    <a href="https://t.me/YOURUSERNAME" target="_blank">
+        <i class="fa-brands fa-telegram"></i>
+        အလုပ်ကိစ္စများအတွက် Telegram မှ ဆက်သွယ်နိုင်ပါတယ်
+    </a>
 </div>
+
 
 
 
