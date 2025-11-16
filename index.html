@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
 
   <!-- BASIC SEO -->
-  <title>Ye Linn Aung | Official Link Hub & Apps</title>
+  <title>Ye Linn Aung</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Official link hub of Ye Linn Aung — Myanmar creator & app developer. Facebook pages, YouTube, TikTok and Android apps like Lucky 2D 3D, Dhamma Book, YLA Game Shop. Visit yelinnaung.com for all links."
+    content="Official link hub of Ye Linn Aung — Myanmar content creator & app developer. Facebook pages, YouTube, TikTok and Android apps. Visit yelinnaung.com for all links."
   />
   <meta
     name="keywords"
-    content="Ye Linn Aung, yelinnaung, Ye Linn, Myanmar creator, Myanmar app developer, Lucky 2D 3D app, Dhamma Book app, YLA Game Shop, Passport QR, Myanmar tech, link hub"
+    content="Ye Linn Aung, yelinnaung, Ye Linn,content creator, Myanmar creator, Myanmar app developer, Lucky 2D 3D app, Dhamma Book app, YLA Game Shop, Passport QR, Myanmar tech, link hub"
   />
   <meta name="author" content="Ye Linn Aung" />
   <meta name="robots" content="index, follow" />
@@ -22,23 +22,23 @@
 
   <!-- OPEN GRAPH -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Ye Linn Aung | Official Link Hub & Apps" />
+  <meta property="og:title" content="Ye Linn Aung" />
   <meta
     property="og:description"
     content="All official links of Ye Linn Aung — Facebook pages, YouTube, TikTok and Android apps (Lucky 2D 3D, Dhamma Book, YLA Game Shop)."
   />
   <meta property="og:url" content="https://yelinnaung.com/" />
   <meta property="og:site_name" content="Ye Linn Aung" />
-  <meta property="og:image" content="https://yelinnaung.com/og-image.jpg" />
+  <meta property="og:image" content="https://yelinnaung.com/logo.png" />
 
   <!-- TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ye Linn Aung | Official Link Hub & Apps" />
+  <meta name="twitter:title" content="Ye Linn Aung" />
   <meta
     name="twitter:description"
     content="All official links of Ye Linn Aung — social channels and Android apps in one page."
   />
-  <meta name="twitter:image" content="https://yelinnaung.com/og-image.jpg" />
+  <meta name="twitter:image" content="https://yelinnaung.com/logo.png" />
 
   <!-- FONT -->
   <link
@@ -65,18 +65,18 @@
         "name": "Ye Linn Aung",
         "alternateName": "yelinnaung",
         "url": "https://yelinnaung.com/",
-        "jobTitle": "Creator & App Developer",
+        "jobTitle": "App Developer & Content Creator",
         "description": "Myanmar-based creator and app developer behind Lucky 2D 3D, Dhamma Book and YLA Game Shop.",
         "sameAs": [
-          "https://facebook.com/your-page-1",
-          "https://facebook.com/your-page-2",
-          "https://youtube.com/@yourchannel",
-          "https://www.tiktok.com/@yourhandle"
+          "https://facebook.com/yelinnaungchannel",
+          "https://facebook.com/yelinnaungvlog",
+          "https://youtube.com/@yelinnaungvlog",
+          "https://www.tiktok.com/@yelinnaungchannel"
         ]
       },
       {
         "@type": "WebSite",
-        "name": "Ye Linn Aung | Official Link Hub & Apps",
+        "name": "Ye Linn Aung",
         "url": "https://yelinnaung.com/",
         "description": "Official website of Ye Linn Aung, collecting all social channels and app download links in one place.",
         "publisher": {
@@ -215,14 +215,6 @@
       text-transform: uppercase;
     }
 
-    /* profile photo ထည့်ချင်ရင် span ဖျက်ပြီး img ထည့်ပါ
-    .avatar-inner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    } */
-
     .hero-title {
       font-size: 1.6rem;
       font-weight: 700;
@@ -294,12 +286,15 @@
       border: 1px solid transparent;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       cursor: pointer;
       text-decoration: none;
       white-space: nowrap;
       position: relative;
       overflow: hidden;
+      height: 40px;
+      z-index: 1;
       transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease,
         border-color 0.16s ease, opacity 0.16s ease;
     }
@@ -308,11 +303,12 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(120deg, rgba(255,255,255,0.35), transparent 50%, transparent);
+      background: linear-gradient(120deg, rgba(255,255,255,0.35), transparent 50%);
       opacity: 0;
-      transform: translateX(-80%);
+      transform: translateX(-100%);
       transition: opacity 0.3s ease, transform 0.4s ease;
       pointer-events: none;
+      z-index: 0;
     }
 
     .btn:hover::before {
@@ -340,6 +336,12 @@
     .btn-ghost:hover {
       background: rgba(15, 23, 42, 1);
       transform: translateY(-1px);
+    }
+
+    .btn-small {
+      padding: 7px 12px;
+      font-size: 0.76rem;
+      height: 36px;
     }
 
     @media (max-width: 480px) {
@@ -476,11 +478,6 @@
       flex-shrink: 0;
     }
 
-    .btn-small {
-      padding: 7px 12px;
-      font-size: 0.76rem;
-    }
-
     @media (max-width: 640px) {
       .item {
         flex-direction: column;
@@ -500,6 +497,7 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
+      align-items: stretch;   /* make row items same height */
     }
 
     @media (max-width: 870px) {
@@ -521,7 +519,7 @@
                   #020617;
       padding: 10px 11px;
       display: flex;
-      flex-direction: column;
+      flex-direction: column;  /* important for pushing buttons to bottom */
       gap: 7px;
       transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
     }
@@ -584,11 +582,20 @@
       color: var(--text-sub);
     }
 
+    /* DOWNLOAD BUTTON ROW – ONE LINE, EQUAL WIDTH, BOTTOM ALIGNED */
     .app-actions {
       display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      margin-top: 4px;
+      gap: 8px;
+      flex-wrap: nowrap;
+      align-items: center;
+      margin-top: auto;   /* push buttons to bottom of card */
+    }
+
+    .app-actions .btn-play,
+    .app-actions .btn-direct {
+      flex: 1 1 0;
+      justify-content: center;
+      min-width: 0;
     }
 
     .btn-play {
@@ -641,35 +648,46 @@
           <div class="avatar-frame">
             <div class="avatar-ring">
               <div class="avatar-inner">
-                <!-- Profile Photo ထည့်ချင်ရင် span ဖျက်ပြီး img ထည့်ပါ -->
+                
                 <!-- <img src="assets/profile.jpg" alt="Ye Linn Aung" /> -->
-                <span>YL</span>
+                <!-- <span>YL</span> -->
+                 <img src="logo.png" alt="Ye Linn Aung" />
               </div>
             </div>
           </div>
           <div>
             <h1 class="hero-title">Ye Linn Aung</h1>
-            <div class="hero-role">Creator · App Developer · Passport QR Service</div>
+            <div class="hero-role">Ye Linn Aung Vlog Official Website </div>
             <p class="hero-sub">
-              Myanmar-based creator & developer building apps like
-              <span>Lucky 2D 3D</span>, <span>Dhamma Book</span> and
-              <span>YLA Game Shop</span>. All official social links & downloads from
-              <strong>yelinnaung.com</strong>.
+              Ye Linn Aung Vlog ရဲ့ 
+              <span>Facebook Page</span>,
+              <span>YouTube Channel</span>,
+              <span>TikTok Channel</span>,
+              <span>ကိုယ်ပိုင် Appများ</span>
+              အားလုံးကို တစ်နေရာတည်းမှာ စုစည်းဖော်ပြပေးထားခြင်းဖြစ်ပါသည်။
+              <!-- <strong>yelinnaung.com</strong>. -->
             </p>
           </div>
 
           <div class="hero-tags">
+
             <span class="tag-pill highlight">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              Search “Ye Linn Aung” · “yelinnaung”
+              <i class="fa fa-code"></i>
+              App Developer
             </span>
-            <span class="tag-pill">
+            <span class="tag-pill highlight">
+              <i class="fa fa-address-book"></i>
+              Content Creator
+            </span>
+
+            <!-- <span class="tag-pill">
               <i class="fa-solid fa-location-dot"></i>
               Myanmar · Digital Creator
-            </span>
+            </span> -->
+
           </div>
 
-          <div class="hero-buttons">
+          <!-- <div class="hero-buttons">
             <a href="#social" class="btn btn-ghost">
               <i class="fa-solid fa-users"></i>
               Social Links
@@ -679,7 +697,7 @@
               My Apps
             </a>
           </div>
-        </div>
+        </div> -->
       </section>
 
       <!-- SOCIAL SECTION -->
@@ -700,14 +718,13 @@
                 <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
               </div>
               <div class="item-text">
-                <div class="item-title">Facebook Page 1 — Passport QR Service</div>
-                <div class="item-sub">Main page for Passport QR update & service info.</div>
+                <div class="item-title"> Ye Linn Aung Vlog </div>
+                <div class="item-sub">ဖုန်းဆော့ဝဲလ်အကြောင်းအရာများကိုနေ့စဉ်မျှဝေပေးနေသော Channel</div>
               </div>
             </div>
             <div class="item-action">
-              <!-- ကိုယ့်จริง Link နဲ့ပြင်ပါ -->
               <a
-                href="https://facebook.com/your-page-1"
+                href="https://facebook.com/yelinnaungchannel"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-ghost btn-small"
@@ -725,13 +742,13 @@
                 <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
               </div>
               <div class="item-text">
-                <div class="item-title">Facebook Page 2 — Ye Linn Aung Vlog</div>
-                <div class="item-sub">Vlog · Study life · Tech tips · App updates.</div>
+                <div class="item-title"> Ye Linn Aung Channel </div>
+                <div class="item-sub">ဖုန်းဆော့ဝဲလ်အကြောင်းအရာများကိုနေ့စဉ်မျှဝေပေးနေသော Channel 2</div>
               </div>
             </div>
             <div class="item-action">
               <a
-                href="https://facebook.com/your-page-2"
+                href="https://facebook.com/yelinnaungvlog"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-ghost btn-small"
@@ -749,13 +766,13 @@
                 <i class="fa-brands fa-youtube" aria-hidden="true"></i>
               </div>
               <div class="item-text">
-                <div class="item-title">YouTube Channel · Ye Linn Aung</div>
-                <div class="item-sub">App demos, tutorials, Myanmar + English mix videos.</div>
+                <div class="item-title"> Ye Linn Aung Vlog </div>
+                <div class="item-sub">ဖုန်းဆော့ဝဲလ်အကြောင်းအရာများကိုနေ့စဉ်မျှဝေပေးနေသော Youtube Channel</div>
               </div>
             </div>
             <div class="item-action">
               <a
-                href="https://youtube.com/@yourchannel"
+                href="https://youtube.com/@yelinnaungvlog"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-ghost btn-small"
@@ -773,8 +790,8 @@
                 <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
               </div>
               <div class="item-text">
-                <div class="item-title">TikTok · @yourhandle</div>
-                <div class="item-sub">Short content · quick tips · behind the scenes.</div>
+                <div class="item-title">TikTok · @yelinnaungchannel</div>
+                <div class="item-sub">Official Tiktok Channel</div>
               </div>
             </div>
             <div class="item-action">
@@ -807,19 +824,17 @@
           <article class="app-card">
             <div class="app-top">
               <div class="app-icon">
-                <!-- Lucky 2D 3D Logo -->
-                <img src="assets/lucky-2d3d.png" alt="Lucky 2D 3D App Logo" />
+                <img src="ylagameshop.png" alt="YLA Game Shop" />
               </div>
               <div class="app-header">
-                <div class="app-name">Lucky 2D 3D Results App</div>
-                <div class="app-tag">Android · Myanmar 2D/3D</div>
+                <div class="app-name"> YLA Game Shop </div>
+                <div class="app-tag">Android & Website</div>
               </div>
             </div>
             <p class="app-desc">
-              2D/3D ရလဒ်တွေကို မြန်မြန်ဆန်ဆန် ကြည်လင်တဲ့ UI နဲ့ ကြည့်နိုင်သော lightweight app။
+              Mobile Legends Diamondများ၊ PUBG UCများ နှင့် အခြား Gameပေါင်းများစွာရဲ့ Coinsများကို စျေးနှုန်းချိုသာစွာဖြင့် ဆောင့်စရာမလိုပဲ ဝယ်ယူနိုင်သောဆော့ဝဲလ်
             </p>
             <div class="app-actions">
-              <!-- Play Store Link -->
               <a
                 href="#"
                 target="_blank"
@@ -829,7 +844,6 @@
                 <i class="fa-brands fa-google-play"></i>
                 Play Store
               </a>
-              <!-- Direct APK Link -->
               <a
                 href="#"
                 target="_blank"
@@ -846,16 +860,15 @@
           <article class="app-card">
             <div class="app-top">
               <div class="app-icon">
-                <!-- Dhamma Book Logo -->
-                <img src="assets/dhamma-book.png" alt="Dhamma Book App Logo" />
+                <img src="ylatv.png" alt="YLA TV" />
               </div>
               <div class="app-header">
-                <div class="app-name">Dhamma Book Audio App</div>
-                <div class="app-tag">Audio · Dhamma</div>
+                <div class="app-name">YLA TV</div>
+                <div class="app-tag">ANDROID</div>
               </div>
             </div>
             <p class="app-desc">
-              ဆရာတော်တရားတော်များကို Audio / Visual ပုံစံနဲ့ ချစ်စရာ UI နဲ့ နားထောင်နိုင်မယ့် app။
+              ဘောလုံးပွဲများ၊ ဟိုက်လိုက်များ၊ မြန်မာစာတန်းထိုးဇာတ်ကားများကို အခမဲ့ ကြည့်ရှုနိုင်သောဆော့ဝဲလ်
             </p>
             <div class="app-actions">
               <a
@@ -883,17 +896,15 @@
           <article class="app-card">
             <div class="app-top">
               <div class="app-icon">
-                <!-- YLA Game Shop Logo -->
-                <img src="assets/yla-gameshop.png" alt="YLA Game Shop App Logo" />
+                <img src="dhammabook.png" alt="Dhamma Book" />
               </div>
               <div class="app-header">
-                <div class="app-name">YLA Game Shop / Top-up Panel</div>
-                <div class="app-tag">Service · Web / App</div>
+                <div class="app-name">Dhamma Book</div>
+                <div class="app-tag">ANDROID</div>
               </div>
             </div>
             <p class="app-desc">
-              Mobile game top-up, in-game item, promotion bundle တွေကို Online နဲ့ လွယ်ကူစွာ
-              ဝယ်ယူနိုင်ဖို့ရည်ရွယ်ထားတဲ့ service။
+              ဗုဒ္ဓတရားဓမတော်များ၊ ဘုရားစာများ အားလုံးကို အလွယ်တကူ ဖတ်ရှု၊ နာယူနိုင်သော ဆော့ဝဲလ်
             </p>
             <div class="app-actions">
               <a
