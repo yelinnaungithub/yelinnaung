@@ -463,10 +463,12 @@
 
     .item-sub {
       font-size: 0.8rem;
-      color: var(--text-sub);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+  color: var(--text-sub);
+  white-space: normal;      /* ဖုန်းမှာ စာကြောင်းကျ သွားအောင် */
+  overflow: visible;        /* အပြည့်ပုံမှန်ပြ */
+  text-overflow: unset;     /* “…” တော့ မလိုတော့ */
+  line-height: 1.4;         /* မြန်မာစာ ကြည့်လို့ လွယ်အောင် */
+  word-break: break-word;   /* စာလုံးရှည်ရင် မျက်နှာပြင်ထဲနဲ့ပဲ ခွာပစ် */
     }
 
     .item-action {
